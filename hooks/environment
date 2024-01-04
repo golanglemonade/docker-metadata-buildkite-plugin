@@ -69,10 +69,10 @@ fi
 
 git_tag="${BUILDKITE_TAG:-}"
 
-disable_git_tag="${BUILDKITE_PLUGIN_DOCKER_METADATA_DISABLE_GIT_TAG:-false}"
+tag_prefix="${BUILDKITE_PLUGIN_DOCKER_METADATA_TAG_PREFIX:-}"
 
-if [ "$disable_git_tag" == "true" ]; then
-    git_tag=""
+if [ -n "$tag_prefix" ]; then
+    git_tag="$tag_prefix-$git_tag"
 fi
 
 # Input validation

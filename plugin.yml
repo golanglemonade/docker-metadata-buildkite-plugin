@@ -24,9 +24,9 @@ configuration:
     debug:
       type: boolean
       description: Enable debug logging (or not).
-    disable_git_tag:
-      type: boolean
-      description: Disable git tag default (or not).
+    tag_prefix:
+      type: string
+      description: Prefix to prepend to all tags.
   required:
     - images
   additionalProperties: false
