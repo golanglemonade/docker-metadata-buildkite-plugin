@@ -24,6 +24,9 @@ configuration:
     debug:
       type: boolean
       description: Enable debug logging (or not).
+    disable_git_tag:
+      type: boolean
+      description: Disable git tag default (or not).
   required:
     - images
   additionalProperties: false
